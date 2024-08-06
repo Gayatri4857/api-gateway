@@ -5,7 +5,8 @@ on:
       -  main
 env: 
   JDK_VERSION: "openjdk11-jdk"
-jobs:    
+jobs:  
+
   install-java:
     runs-on: ubuntu-latest
     container:
@@ -13,7 +14,14 @@ jobs:
     steps:
       - name: install java
         run: |
-          apk 
-          run: java --version add --no-cache $ JDK_VERSION: "openjdk11-jdk"
-      - name: print java -version
+          apk add --no-cache $JDK_VERSION:
+          java --version
+      
+  print-env:
+     runs-on: ubuntu-latest
+     steps:
+      - name: evn print
+        run: echo $JDK_VERSION
+      
+       
      
