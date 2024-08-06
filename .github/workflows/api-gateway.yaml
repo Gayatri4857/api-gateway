@@ -22,6 +22,7 @@ jobs:
 
   print-maven-version:
       runs-on: ubuntu-latest
+      needs: install-java
       steps:
        - name: print maven version
          run: echo $MAVEN_VERSION
