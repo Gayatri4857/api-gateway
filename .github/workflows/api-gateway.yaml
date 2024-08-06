@@ -14,9 +14,9 @@ jobs:
     steps:
       - name: install java
         run: |
-          apk add --no-cache $JDK_VERSION:
+          apk add --no-cache $JDK_VERSION 
           java --version
-          echo "MAVEN_VERSION =123" (($ GITHUB_ENV
+          echo "MAVEN_VERSION =123" >> $GITHUB_ENV
       
   print-env:
      runs-on: ubuntu-latest
