@@ -19,6 +19,13 @@ jobs:
           echo "MAVEN_VERSION=123" >> $GITHUB_ENV
       - name: print maven version
         run: echo $MAVEN_VERSION
+
+  print-maven-version:
+      runs-on: ubuntu-latest
+      steps:
+       - name: print maven version
+         run: echo $MAVEN_VERSION
+      
     
        
      
