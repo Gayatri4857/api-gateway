@@ -1,17 +1,19 @@
-name: Build and deploy 
-
+name: Learn basic of GitHub Action
 on:
   push:
     branches:
       -  main
-
-jobs:
-  build:
+env: 
+  JDK_VERSION: "openjdk11-jdk"
+jobs:    
+  install-java:
     runs-on: ubuntu-latest
-
+    container:
+      image: alpine:latest
     steps:
-      - name: Build with Maven
-        run: mvn clean install
-
-      - name: Build Docker Image
-        run: mvn docker:build
+      - name: install java
+        run: |
+          apk 
+          run: java --version add --no-cache $ JDK_VERSION: "openjdk11-jdk"
+      - name: print java -version
+     
